@@ -1,5 +1,7 @@
 package SystemDesign.LLD.Observable;
 
+import SystemDesign.LLD.Observable.Observers.ObserverInterface;
+
 public interface ObservableInterface {
 	
 	public void add( ObserverInterface obs ) ;

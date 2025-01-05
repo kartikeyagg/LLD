@@ -2,6 +2,8 @@ package SystemDesign.LLD.Observable;
 
 import java.util.ArrayList;
 
+import SystemDesign.LLD.Observable.Observers.ObserverInterface;
+
 public class WeatherObservable implements ObservableInterface {
 	
 	private ArrayList<ObserverInterface > observerList;

@@ -1,5 +1,9 @@
 package SystemDesign.LLD.Strategy;
 
+import SystemDesign.LLD.Strategy.Vehicles.OffRoadVehicle;
+import SystemDesign.LLD.Strategy.Vehicles.PassengerVehicle;
+import SystemDesign.LLD.Strategy.Vehicles.SportsUtilityvehicle;
+
 public class StrategyVehicleMain {
 
 	public static void main(String[] args) {

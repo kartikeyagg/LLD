@@ -1,5 +1,8 @@
 package SystemDesign.LLD.Observable;
 
+import SystemDesign.LLD.Observable.Observers.LaptopObserver;
+import SystemDesign.LLD.Observable.Observers.PhoneObserver;
+
 public class ObserverMain {
 
 	public static void main(String[] args) {
