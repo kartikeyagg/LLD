@@ -28,7 +28,7 @@ public abstract class ParkingSlotManager {
 		
 	}
 	
-	public void unparkVehicle(Vehicle vehicle , ParkingSpot ps ) {
+	public void unparkVehicle(ParkingSpot ps  ) {
 		
 		
 	}

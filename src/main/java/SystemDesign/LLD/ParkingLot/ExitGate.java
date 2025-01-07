@@ -11,7 +11,7 @@ public class ExitGate {
 		
 		long cost = this.getprice(ticket, System.currentTimeMillis()- ticket.getEntryTime()) ;
 		
-		this.removeVehicle(ticket.getVehicle());
+		this.removeVehicle(  ticket.getParkingSpot(),  ticket.getVehicle());
 		
 		System.out.println("the parking charges are " + cost);
 	}
@@ -25,10 +25,11 @@ public class ExitGate {
 		
 	}
 	
-	private void removeVehicle(Vehicle v) {
+	private void removeVehicle(ParkingSpot ps, Vehicle v ) {
 		
 		
-		
+		ParkingSlotManager psm =  this.psmFactory.getPSM(v.getType()) ;
+		psm.unparkVehicle( ps );
 		
 		
 	}
