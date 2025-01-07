@@ -2,6 +2,8 @@ package SystemDesign.LLD.ParkingLot;
 
 public class PSMFactory {
 	
+	// make this singleton instead;
+	
 	private ParkingSlotManager FourVehicle ;
 	private ParkingSlotManager TwoVehicleManager;
 

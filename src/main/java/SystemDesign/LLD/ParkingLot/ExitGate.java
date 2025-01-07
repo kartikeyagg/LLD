@@ -5,12 +5,15 @@ public class ExitGate {
 	// there for 
 	
 	private CostFactory costFactory  = new CostFactory() ;
+	private PSMFactory psmFactory = new PSMFactory() ; 
 	
 	public void processExit(Ticket ticket) {
 		
 		long cost = this.getprice(ticket, System.currentTimeMillis()- ticket.getEntryTime()) ;
 		
+		this.removeVehicle(ticket.getVehicle());
 		
+		System.out.println("the parking charges are " + cost);
 	}
 	
 	private long getprice(Ticket ticket , long time) {
@@ -23,6 +26,9 @@ public class ExitGate {
 	}
 	
 	private void removeVehicle(Vehicle v) {
+		
+		
+		
 		
 		
 	}
