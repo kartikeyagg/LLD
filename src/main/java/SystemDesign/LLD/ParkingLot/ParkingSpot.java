@@ -22,7 +22,7 @@ public class ParkingSpot {
 		return vehicle;
 	}
 
-	public void setVehicle(Vehicle vehicle) {
+	public void parkVehicle(Vehicle vehicle) {
 		this.vehicle = vehicle;
 		this.isEmpty = false; 
 	}

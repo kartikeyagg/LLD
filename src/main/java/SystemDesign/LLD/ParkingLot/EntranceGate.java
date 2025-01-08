@@ -6,8 +6,8 @@ public class EntranceGate {
 	
 	private static int vehicleCounter =0  ;
 	
-	public EntranceGate(PSMFactory psmFactory) {
-		this.psmFactory = psmFactory;
+	public EntranceGate() {
+		this.psmFactory = PSMFactory.getInstance();
 	}
 
 	public Vehicle initVehicle(VehicleType vType, PriceStrategy pStr) {
@@ -19,11 +19,15 @@ public class EntranceGate {
 		return PSM.findParkingSpace();
 	}
 	
-	public void parkVehicle(Vehicle v, ParkingSpot ps) {
+	public Ticket parkVehicle(Vehicle v, ParkingSpot ps) {
 		
 		ParkingSlotManager PSM = this.psmFactory.getPSM(v.getType());
 		
 		PSM.parkVehicle(v, ps);
+		
+		Ticket ticket  = new Ticket(System.currentTimeMillis(), v, ps) ;
+		
+		return ticket;
 		
 	}
 

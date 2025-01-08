@@ -5,7 +5,7 @@ public class ExitGate {
 	// there for 
 	
 	private CostFactory costFactory  = new CostFactory() ;
-	private PSMFactory psmFactory = new PSMFactory() ; 
+	private PSMFactory psmFactory = PSMFactory.getInstance() ; 
 	
 	public void processExit(Ticket ticket) {
 		

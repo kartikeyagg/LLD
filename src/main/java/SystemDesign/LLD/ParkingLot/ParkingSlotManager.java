@@ -2,6 +2,8 @@ package SystemDesign.LLD.ParkingLot;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public abstract class ParkingSlotManager {
 	
@@ -17,7 +19,15 @@ public abstract class ParkingSlotManager {
 		
 	}
 	
-	public ParkingSpot findParkingSpace(  ) {
+	public ParkingSpot findParkingSpace() {
+		
+		Iterator<Map.Entry<Integer, ParkingSpot>> itr;
+		
+		  for (Map.Entry<Integer, ParkingSpot> entry : idToParkingSpot.entrySet()) {
+	            if(entry.getValue().isEmpty() ) {
+	            	return entry.getValue() ; 
+	            }
+	        }
 		
 		return null ;
 		
@@ -25,11 +35,13 @@ public abstract class ParkingSlotManager {
 	
 	public void parkVehicle( Vehicle vehicle, ParkingSpot ps  ) {
 		
+		ps.parkVehicle(vehicle);
 		
 	}
 	
 	public void unparkVehicle(ParkingSpot ps  ) {
 		
+		ps.unparkVehicle(); 
 		
 	}
 	
