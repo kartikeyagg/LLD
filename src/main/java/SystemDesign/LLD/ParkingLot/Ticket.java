@@ -22,7 +22,14 @@ public class Ticket {
 
 	public ParkingSpot getParkingSpot() {
 		return parkingSpot;
+	}
+
+	@Override
+	public String toString() {
+		return "Ticket [entryTime=" + entryTime + ", vehicle=" + vehicle + ", parkingSpot=" + parkingSpot + "]";
 	} 
+	
+	
 	
 	
 	

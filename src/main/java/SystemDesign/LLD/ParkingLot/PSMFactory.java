@@ -1,5 +1,7 @@
 package SystemDesign.LLD.ParkingLot;
 
+import java.util.ArrayList;
+
 public class PSMFactory {
 
 	private ParkingSlotManager FourVehicle;
@@ -19,8 +21,18 @@ public class PSMFactory {
 	private PSMFactory() {
 
 		// we can read from a file here ;
-		FourVehicle = new FourVehiclePSM(null);
-		TwoVehicleManager = new TwoWheelerPSM(null);
+		ArrayList<ParkingSpot> fourWheelerPS =  new ArrayList<ParkingSpot>();
+		ArrayList<ParkingSpot> TwowheellerPS =  new ArrayList<ParkingSpot>(); 
+		
+		int count =0 ;
+		
+		for(int i =0 ; i< 20 ; i++) {
+			fourWheelerPS.add(new ParkingSpot(count++)) ; 
+			TwowheellerPS.add(new ParkingSpot(count++)) ; 
+		}
+		
+		FourVehicle = new FourWheelerPSM(fourWheelerPS);
+		TwoVehicleManager = new TwoWheelerPSM(TwowheellerPS);
 
 	}
 

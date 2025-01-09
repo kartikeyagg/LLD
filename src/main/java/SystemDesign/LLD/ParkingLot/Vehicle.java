@@ -7,7 +7,7 @@ public class Vehicle {
 	private PriceStrategy ps ;
 	
 	public Vehicle(int id, VehicleType type, PriceStrategy ps) {
-		super();
+		
 		this.id = id;
 		this.type = type;
 		this.ps = ps;

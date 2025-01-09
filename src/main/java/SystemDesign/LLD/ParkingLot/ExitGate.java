@@ -9,11 +9,15 @@ public class ExitGate {
 	
 	public void processExit(Ticket ticket) {
 		
-		long cost = this.getprice(ticket, System.currentTimeMillis()- ticket.getEntryTime()) ;
+		long currTime = System.currentTimeMillis();
 		
-		this.removeVehicle(  ticket.getParkingSpot(),  ticket.getVehicle());
+		long cost = this.getprice(ticket, currTime- ticket.getEntryTime()) ;
+		
+		this.unparkVehicle(  ticket.getParkingSpot(),  ticket.getVehicle());
 		
 		System.out.println("the parking charges are " + cost);
+		System.out.println( "currTime: " + currTime );
+		System.out.println(ticket);
 	}
 	
 	private long getprice(Ticket ticket , long time) {
@@ -25,7 +29,7 @@ public class ExitGate {
 		
 	}
 	
-	private void removeVehicle(ParkingSpot ps, Vehicle v ) {
+	private void unparkVehicle(ParkingSpot ps, Vehicle v ) {
 		
 		
 		ParkingSlotManager psm =  this.psmFactory.getPSM(v.getType()) ;
