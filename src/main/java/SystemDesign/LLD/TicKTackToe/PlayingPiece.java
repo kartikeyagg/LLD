@@ -13,6 +13,13 @@ public abstract class PlayingPiece {
 	public PieceType getPieceType() {
 		return pieceType;
 	}
+
+	@Override
+	public String toString() {
+		return this.pieceType.toString() ; 
+	}
+	
+	
 	
 	
 
