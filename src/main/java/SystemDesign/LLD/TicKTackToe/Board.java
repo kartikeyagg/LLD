@@ -4,7 +4,7 @@ public class Board {
 	
 	int size;
 	PlayingPiece[][] arr;
-
+	boolean won = false;
 	public Board(int size) {
 		this.size = size;
 		this.arr = new  PlayingPiece[size][size] ;
@@ -21,6 +21,8 @@ public class Board {
 		}
 
 		arr[i][j] = p;
+		
+		this.won = this.check( i, j, p) ;
 
 		return true;
 
@@ -37,15 +39,16 @@ public class Board {
 			else {
 				count++ ;
 			}
-			
+
 		}
-		if( count == size) {
-			return true; 
+		if (count == size) {
+			return true;
 		}
-		
-for(int k =0  ; k<size;k++) {
-			
-			if(!this.arr[i][k].equals(p) ) {
+		count = 0 ;
+
+		for (int k = 0; k < size; k++) {
+
+			if (!this.arr[k][j].equals(p)) {
 				break;
 			}
 			
@@ -58,7 +61,47 @@ for(int k =0  ; k<size;k++) {
 			return true; 
 		}
 		
+		if(!onDiagnol(i, j)) {
+			return false ;
+		}
+		count = 0 ;
 		
+		for(int k =0  ; k<size ;k++) {
+			
+			if(arr[i][j].equals(p)) {
+				count++ ;
+			}
+			else break ;
+			
+			
+		}
+		
+		if(count == size) return true;
+		
+		for(int k = 0 ; k< size ; k++) {
+			
+			if(arr[i][ -1+size -i ].equals(p)) {
+				count++ ;
+			}
+			else break ;
+			
+		}
+		
+		if(count == size) return true;
+		
+		return false; 
+		
+		
+	}
+	
+	private boolean onDiagnol( int i, int j) {
+		
+		if(i==j) return true;
+		
+		if( i+j == size-1) return true;
+		
+		return false;
+					
 		
 		
 	}
