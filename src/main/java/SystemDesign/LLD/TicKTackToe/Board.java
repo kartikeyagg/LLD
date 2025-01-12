@@ -32,7 +32,7 @@ public class Board {
 		int count =0 ;
 		for(int k =0  ; k<size;k++) {
 			
-			if(!this.arr[i][k].equals(p) ) {
+			if(! p.equals( this.arr[i][k]  ) ) {
 				break;
 			}
 			
@@ -48,7 +48,7 @@ public class Board {
 
 		for (int k = 0; k < size; k++) {
 
-			if (!this.arr[k][j].equals(p)) {
+			if (!  p.equals(this.arr[k][j])) {
 				break;
 			}
 			
@@ -68,7 +68,7 @@ public class Board {
 		
 		for(int k =0  ; k<size ;k++) {
 			
-			if(arr[i][j].equals(p)) {
+			if( p.equals( arr[k][k])) {
 				count++ ;
 			}
 			else break ;
@@ -80,7 +80,7 @@ public class Board {
 		
 		for(int k = 0 ; k< size ; k++) {
 			
-			if(arr[i][ -1+size -i ].equals(p)) {
+			if(p.equals(arr[k][ -1+size -k ] ) ){
 				count++ ;
 			}
 			else break ;
