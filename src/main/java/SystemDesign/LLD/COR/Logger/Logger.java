@@ -20,6 +20,7 @@ public abstract class Logger {
 			nextLogger.log(logLevel,s) ;
 		}
 		
+		
 	}
 	
 	

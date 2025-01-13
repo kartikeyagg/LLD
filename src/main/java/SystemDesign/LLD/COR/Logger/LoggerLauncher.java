@@ -10,6 +10,7 @@ public class LoggerLauncher {
 		logger.log(Logger.ErrorLogger, "Exception 104");
 		logger.log(Logger.DebugLogger, "Debug String");
 		logger.log(Logger.InfoLogger, "Info String");
+		logger.log(543, "Test String");
 		
 		
 	}
