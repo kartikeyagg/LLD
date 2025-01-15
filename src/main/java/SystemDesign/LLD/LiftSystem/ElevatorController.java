@@ -14,12 +14,12 @@ public class ElevatorController {
 
 
 
-	public void acceptRequest(int floor) {
+	public void acceptRequest(int floor) { // from internal button 
 		// TODO Auto-generated method stub
 		
 	}
 	
-	public void acceptRequest(int floor, Direction dir) {
+	public void acceptRequest(int floor, Direction dir) { // from external button
 		
 		
 	}
