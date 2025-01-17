@@ -8,7 +8,7 @@ public class ElevatorController {
 	private ElevatorCart elevator ;
 	
 	private PriorityQueue<Integer> maxHeap; 
-	private PriorityQueue<Integer> minHeap ; 
+	private PriorityQueue<Integer> minHeap ;
 	
 	// there should be a list of floor which will be updated at every time the direction changes;
 	
@@ -21,7 +21,10 @@ public class ElevatorController {
 	public void acceptRequest(int floor) { // from internal button 
 		// TODO Auto-generated method stub
 		
-		
+		if( elevator.getDir().equals(Direction.DOWN)) {
+			
+			
+		}
 		
 		
 		
