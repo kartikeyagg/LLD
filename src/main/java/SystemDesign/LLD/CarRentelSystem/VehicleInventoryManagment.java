@@ -3,20 +3,22 @@ package SystemDesign.LLD.CarRentelSystem;
 import java.util.HashMap;
 
 public class VehicleInventoryManagment {
-	
-	
-	HashMap<Integer, Vehicle> mp ;
+
+	HashMap<Integer, Vehicle> vehicleMap;
 
 	public VehicleInventoryManagment() {
-		
-		this.mp = new HashMap<Integer, Vehicle>()  ;
-		
+		this.vehicleMap = new HashMap<Integer, Vehicle>();
+	}
+	public void addVehicle(Vehicle v) {
+		vehicleMap.put(v.getId(), v);
+	}
+
+	public void getVehicle(int id) {
+		vehicleMap.get(id);
 	}
 	
-	
-	
-	
-	
-	
+	public void removeVehicle(int id) {
+		vehicleMap.remove(id) ;
+	}
 
 }
