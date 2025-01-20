@@ -1,16 +1,19 @@
 package SystemDesign.LLD.CarRentelSystem;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class VehicleRentalSystem {
 	
 	
 	private HashMap<Integer, User> usersmap;
-	private HashMap<Integer, Store> storesMap ;
+	private HashMap<Integer, Store> storesMap ; 
+	private HashSet<String> cities ; 
 	
 	public VehicleRentalSystem() {
 		this.usersmap =  new HashMap<Integer, User>() ; 
 		this.storesMap = new HashMap<Integer, Store>();	
+		this.cities = new HashSet<String>() ;
 	}
 	public void adduser ( User user) {
 		this.usersmap.put(user.getUserID(), user);
@@ -27,6 +30,12 @@ public class VehicleRentalSystem {
 	public Store getStore(int id) {
 		return this.storesMap.get(id) ;
 	}
+	
+	public HashSet<String> getCities() {
+		return cities;
+	}
+	
+	
 	
 
 }
