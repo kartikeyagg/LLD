@@ -7,13 +7,13 @@ public class Store {
 	private int storeId; 
 	private VehicleInventoryManagment vehicleInventoryManagment;
 	private Location location;
-	private ArrayList<Reservation> arr;
+	private ArrayList<Reservation> reservationArr;
 
 	public Store(int storeId, VehicleInventoryManagment vehicleInventoryManagment, Location location) {
 		this.storeId = storeId;
 		this.vehicleInventoryManagment = vehicleInventoryManagment;
 		this.location = location;
-		this.arr = new ArrayList<>();
+		this.reservationArr = new ArrayList<>();
 	}
 
 	public int getStoreId() {
@@ -29,7 +29,13 @@ public class Store {
 	}
 
 	public ArrayList<Reservation> getArr() {
-		return arr; 
+		return reservationArr; 
+	}
+
+	public void book(Reservation b) {
+		// TODO Auto-generated method stub
+		
+		this.reservationArr.add(b) ;
 	}
 
 }

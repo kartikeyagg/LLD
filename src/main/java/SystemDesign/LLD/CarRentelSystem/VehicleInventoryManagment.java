@@ -13,8 +13,8 @@ public class VehicleInventoryManagment {
 		vehicleMap.put(v.getId(), v);
 	}
 
-	public void getVehicle(int id) {
-		vehicleMap.get(id);
+	public Vehicle getVehicle(int id) {
+		return vehicleMap.get(id);
 	}
 	
 	public void removeVehicle(int id) {
