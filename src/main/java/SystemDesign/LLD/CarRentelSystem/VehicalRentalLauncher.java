@@ -23,7 +23,7 @@ public class VehicalRentalLauncher {
 		
 		vehicleInventoryManagment.addVehicle(v1);
 		vehicleInventoryManagment.addVehicle(v2);
-		vehicleInventoryManagment.addVehicle(v3);
+		vehicleInventoryManagment.addVehicle(v3); 
 		
 		Location loc = new Location("DELHI", 10045, "B-74,Okhla") ;
 		 
