@@ -12,6 +12,8 @@ public class Expression implements ArithmeticExpression {
 		this.leftExp = leftExp;
 		this.rightExp = rightExp;
 	}
+	
+	
 
 	@Override
 	public double evaluate() {
