@@ -1,5 +1,6 @@
 package SystemDesign.LLD.BuilderDesign.StudentBuilder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class StudentBuilder {
@@ -9,7 +10,7 @@ public abstract class StudentBuilder {
     String name;
     String fatherName;
     String motherName;
-    List<String> subjects;
+    List<String> subjects = new ArrayList<String>();
 
     public StudentBuilder setRollNumber(int rollNumber) {
         this.rollNumber = rollNumber;

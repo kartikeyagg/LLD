@@ -19,13 +19,42 @@ public class Student {
         this.motherName = builder.motherName;
         this.subjects = builder.subjects;
     }
+    
 
-    public String toString(){
+    public int getRollNumber() {
+		return rollNumber;
+	}
+
+	public int getAge() {
+		return age;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getFatherName() {
+		return fatherName;
+	}
+
+
+	public String getMotherName() {
+		return motherName;
+	}
+
+
+	public List<String> getSubjects() {
+		return subjects;
+	}
+
+	
+
+	public String toString(){
         return ""+ " roll number: " + this.rollNumber +
                 " age: " + this.age +
                 " name: " + this.name +
                 " father name: " + this.fatherName +
                 " mother name: " + this.motherName +
-                " subjects: " + subjects.get(0) + "," + subjects.get(1) + "," + subjects.get(2);
+                " subjects: " + subjects;
     }
 }
